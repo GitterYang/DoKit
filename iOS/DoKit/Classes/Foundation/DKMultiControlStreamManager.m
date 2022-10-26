@@ -15,13 +15,13 @@
  */
 
 #import "DKMultiControlStreamManager.h"
-#import <DoraemonKit/DKActionDTOModel.h>
-#import <DoraemonKit/DKCommonDTOModel.h>
-#import <DoraemonKit/DKWebSocketSession.h>
-#import <DoraemonKit/DKDataRequestDTOModel.h>
-#import <DoraemonKit/DKDataResponseDTOModel.h>
-#import <DoraemonKit/DKMultiControlProtocol.h>
-#import <DoraemonKit/DoraemonMCCommandExcutor.h>
+#import "DKActionDTOModel.h"
+#import "DKCommonDTOModel.h"
+#import "DKWebSocketSession.h"
+#import "DKDataRequestDTOModel.h"
+#import "DKDataResponseDTOModel.h"
+#import "DKMultiControlProtocol.h"
+#import "DoraemonMCCommandExcutor.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

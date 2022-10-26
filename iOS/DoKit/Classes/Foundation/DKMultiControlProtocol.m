@@ -15,7 +15,7 @@
  */
 
 #import "DKMultiControlProtocol.h"
-#import <DoraemonKit/DKMultiControlStreamManager.h>
+#import "DKMultiControlStreamManager.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

@@ -16,7 +16,7 @@
 
 #import <objc/runtime.h>
 #import "NSURLSessionConfiguration+DoKit.h"
-#import <DoraemonKit/DKMultiControlProtocol.h>
+#import "DKMultiControlProtocol.h"
 
 @implementation NSURLSessionConfiguration (DoKit)
 

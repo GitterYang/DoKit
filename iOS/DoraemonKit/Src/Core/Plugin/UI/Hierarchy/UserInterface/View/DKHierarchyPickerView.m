@@ -1,5 +1,5 @@
-#import <DoraemonKit/DKHierarchyPickerView.h>
-#import <DoraemonKit/DoraemonHierarchyHelper.h>
+#import "DKHierarchyPickerView.h"
+#import "DoraemonHierarchyHelper.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
