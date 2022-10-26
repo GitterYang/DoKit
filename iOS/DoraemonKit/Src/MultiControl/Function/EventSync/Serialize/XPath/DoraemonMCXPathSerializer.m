@@ -56,7 +56,7 @@ static NSUInteger const kDoraemonMCXPathUseKeyWindowIndex = 99999;
 
 - (NSArray<Class> *)ignoreContainerClasses {
     return @[
-        [UIWebView class],
+//        [UIWebView class],
         [WKWebView class]
     ];
 }

@@ -77,13 +77,13 @@
             }
         }];
     }
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wdeprecated-declarations"
-    if ([currentWebView isKindOfClass:UIWebView.class]) {
-        UIWebView *webView = currentWebView;
-        [webView stringByEvaluatingJavaScriptFromString:script];
-    }
-#pragma clang diagnostic pop
+//#pragma clang diagnostic push
+//#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+//    if ([currentWebView isKindOfClass:UIWebView.class]) {
+//        UIWebView *webView = currentWebView;
+//        [webView stringByEvaluatingJavaScriptFromString:script];
+//    }
+//#pragma clang diagnostic pop
 }
 
 @end
