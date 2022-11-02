@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <DoraemonKit/DoraemonStartPluginProtocol.h>
+#import <DoraemonKit-NoUIWebView/DoraemonStartPluginProtocol.h>
 
 @interface StartPlugin : NSObject<DoraemonStartPluginProtocol>
 

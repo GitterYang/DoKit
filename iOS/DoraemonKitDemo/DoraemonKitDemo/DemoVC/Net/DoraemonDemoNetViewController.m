@@ -9,12 +9,12 @@
 #import "DoraemonDemoNetViewController.h"
 #import "UIView+Doraemon.h"
 #import <AFNetworking/AFNetworking.h>
-#import <DoraemonKit/DoraemonNSURLProtocol.h>
+#import <DoraemonKit-NoUIWebView/DoraemonNSURLProtocol.h>
 #import "DoraemonDefine.h"
 #import "DoraemonUIWebViewViewController.h"
 #import "DoraemonWKWebViewViewController.h"
 #import "DoraemonDemoImageViewController.h"
-#import <DoraemonKit/DoraemonNetworkUtil.h>
+#import <DoraemonKit-NoUIWebView/DoraemonNetworkUtil.h>
 #import "DoraemonDemoNetTableViewCell.h"
 #import "DoraemonDemoURLProtocol1.h"
 #import "DoraemonDemoURLProtocol2.h"

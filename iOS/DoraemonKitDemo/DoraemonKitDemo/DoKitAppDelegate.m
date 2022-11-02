@@ -7,13 +7,13 @@
 //
 
 #import "DoKitAppDelegate.h"
-#import <DoraemonKit/DoraemonKit.h>
+#import <DoraemonKit-NoUIWebView/DoraemonKit.h>
 #import "DoraemonDemoHomeViewController.h"
 #import "DoraemonTimeProfiler.h"
 //#import <CocoaLumberjack/CocoaLumberjack.h>
 #import "DoraemonUtil.h"
 #import "SDImageWebPCoder.h"
-#import <DoraemonKit/DoraemonAppInfoViewController.h>
+#import <DoraemonKit-NoUIWebView/DoraemonAppInfoViewController.h>
 #import <fmdb/FMDB.h>
 
 #if __has_include(<FBRetainCycleDetector/FBRetainCycleDetector.h>)

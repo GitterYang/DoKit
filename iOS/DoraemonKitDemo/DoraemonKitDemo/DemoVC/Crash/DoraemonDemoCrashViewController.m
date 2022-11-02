@@ -8,7 +8,7 @@
 
 #import "DoraemonDemoCrashViewController.h"
 
-#import <DoraemonKit/UIView+Doraemon.h>
+#import <DoraemonKit-NoUIWebView/UIView+Doraemon.h>
 
 #import "DoraemonDemoCrashMRCView.h"
 #import "DoraemonDefine.h"

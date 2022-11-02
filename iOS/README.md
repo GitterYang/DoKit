@@ -1,8 +1,8 @@
-## DoraemonKit如何使用
+## DoraemonKit 如何使用
 
 ### 一、集成方式
 
-#### 1.1: cocoapods依赖
+#### 1.1: cocoapods 依赖
 
 ```
     pod 'DoraemonKit/Core', '~> 3.0.4', :configurations => ['Debug'] //必选
@@ -13,36 +13,38 @@
     pod 'DoraemonKit/WithDatabase', '~> 3.0.4', :configurations => ['Debug'] //可选
     pod 'DoraemonKit/WithMLeaksFinder', '3.0.4', :configurations => ['Debug'] //可选
 ```
-Core subspec作为核心，必须引入。
 
-如果你的日志是基于CocoaLumberjack，那你也可以引入WithLogger subspec。
+Core subspec 作为核心，必须引入。
 
-如果你想使用模拟定位的功能，请单独接入WithGPS subspec。
+如果你的日志是基于 CocoaLumberjack，那你也可以引入 WithLogger subspec。
 
-如果你要集成Load耗时检测的话，那就请接入WithLoad subspec。
+如果你想使用模拟定位的功能，请单独接入 WithGPS subspec。
 
-如果你要集成Weex的相关专项工具的话，那就请接入WithWeex subspec。
+如果你要集成 Load 耗时检测的话，那就请接入 WithLoad subspec。
 
-如果你要使用[YYDebugDatabase](https://github.com/y500/iOSDebugDatabase)在网页端调式数据库的话，那就请接入WithDatabase subspec。
+如果你要集成 Weex 的相关专项工具的话，那就请接入 WithWeex subspec。
 
-如果你要使用[MLeaksFinder](https://github.com/Tencent/MLeaksFinder)查找内存泄漏的问题的话，那就请接入WithMLeaksFinder subspec。
+如果你要使用[YYDebugDatabase](https://github.com/y500/iOSDebugDatabase)在网页端调式数据库的话，那就请接入 WithDatabase subspec。
 
-#### 1.2: Carthage依赖
+如果你要使用[MLeaksFinder](https://github.com/Tencent/MLeaksFinder)查找内存泄漏的问题的话，那就请接入 WithMLeaksFinder subspec。
+
+#### 1.2: Carthage 依赖
 
 ```
 git "https://github.com/didi/DoraemonKit.git"  "c3.0.4"
     或者
     github "didi/DoraemonKit"
 ```
-**tip**：只在Debug环境中进行集成，不要带到线上。有一些hook操作会污染线上代码。
 
+**tip**：只在 Debug 环境中进行集成，不要带到线上。有一些 hook 操作会污染线上代码。
 
-### 二、使用DoraemonKit内置工具集的接入方式
-在App启动的时候添加一下代码
+### 二、使用 DoraemonKit 内置工具集的接入方式
+
+在 App 启动的时候添加一下代码
 
 ```objective-c
 #ifdef DEBUG
-#import <DoraemonKit/DoraemonManager.h>
+#import <DoraemonKit-NoUIWebView/DoraemonManager.h>
 #endif
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
@@ -55,12 +57,13 @@ git "https://github.com/didi/DoraemonKit.git"  "c3.0.4"
 }
 ```
 
- 通过以上步骤你就可以使用DorameonKit所有的内置工具集合。如果你想把自己与业务相关的一些工具代码加入到DoraemonKit中做统一管理的话，你可以按照3的步骤来做。
+通过以上步骤你就可以使用 DorameonKit 所有的内置工具集合。如果你想把自己与业务相关的一些工具代码加入到 DoraemonKit 中做统一管理的话，你可以按照 3 的步骤来做。
 
-### 三、添加自定义测试模块到Doraemon面板中（非必要）
-比如我们要在Doraemon面板中添加一个环境切换的功能。
+### 三、添加自定义测试模块到 Doraemon 面板中（非必要）
 
-第一步：新建一个类，实现DoraemonPluginProtocol协议中的pluginDidLoad方法，该方法就是以后点击Doraemon工具面板中"环境切换"按钮触发的事件。
+比如我们要在 Doraemon 面板中添加一个环境切换的功能。
+
+第一步：新建一个类，实现 DoraemonPluginProtocol 协议中的 pluginDidLoad 方法，该方法就是以后点击 Doraemon 工具面板中"环境切换"按钮触发的事件。
 
 比如以代驾司机端为例，点击按钮之后会进入环境切换页面。
 
@@ -73,16 +76,15 @@ git "https://github.com/didi/DoraemonKit.git"  "c3.0.4"
  @end
 ```
 
+第二步：在 Doraemon 初始化的地方添加第一步中添加的"环境切换"插件
 
-第二步：在Doraemon初始化的地方添加第一步中添加的"环境切换"插件
-
-调用DoraemonManager的以下方法：
+调用 DoraemonManager 的以下方法：
 
 ```
 [[DoraemonManager shareInstance] addPluginWithTitle:@"环境切换" icon:@"doraemon_default" desc:@"用于app内部环境切换功能" pluginName:@"KDDoraemonEnvPlugin" atModule:@"业务专区"];
 ```
 
-依次代表 集成到DoraemonKit面板中的标题，图标，描述，插件名称，和所属于的模块。
+依次代表 集成到 DoraemonKit 面板中的标题，图标，描述，插件名称，和所属于的模块。
 
 比如以代驾司机端为例：
 
@@ -102,17 +104,18 @@ git "https://github.com/didi/DoraemonKit.git"  "c3.0.4"
 }
 ```
 
-**tips**:目前也支持使用block方式接入自定义测试模块，使用方式如下：
+**tips**:目前也支持使用 block 方式接入自定义测试模块，使用方式如下：
 
 ```
 
     [[DoraemonManager shareInstance] addPluginWithTitle:@"标题" icon:@"doraemon_default" desc:@"测试插件" pluginName:@"TestPlugin(可以为空)" atModule:DoraemonLocalizedString(@"业务工具") handle:^(NSDictionary *itemData) {
         NSLog(@"handle block plugin");
     }];
-    
+
 ```
 
 ### 四、swift 接入方式
+
 pod 同 OC 一样
 
 #### swift 4.0 4.2 5.0 接入方式都一样
@@ -132,13 +135,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
+
     #if DEBUG
         DoraemonManager.shareInstance().install()
     #endif
         return true
     }
-    
+
 }
 ```
-

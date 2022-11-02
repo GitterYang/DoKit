@@ -7,7 +7,7 @@
 //
 
 #import "DoraemonDemoMultiControlViewController.h"
-#import <DoraemonKit/UIView+Doraemon.h>
+#import <DoraemonKit-NoUIWebView/UIView+Doraemon.h>
 #import "DoraemonDefine.h"
 #import "DoraemonHealthAlertView.h"
 #import "DoraemonDemoMultiConLongPressGesture.h"
