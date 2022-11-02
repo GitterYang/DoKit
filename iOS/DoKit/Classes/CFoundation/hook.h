@@ -17,7 +17,7 @@
 #ifndef dokit_hook
 #define dokit_hook
 
-#include <DoraemonKit-NoUIWebView/common.h>
+#include "common.h"
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
