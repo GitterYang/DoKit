@@ -15,7 +15,7 @@
  */
 
 #import "DoKit.h"
-#import <DoraemonKit-NoUIWebView/DKTrayViewController.h>
+#import "DKTrayViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

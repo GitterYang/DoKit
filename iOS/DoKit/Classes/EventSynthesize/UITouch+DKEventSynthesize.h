@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#import <DoraemonKit-NoUIWebView/common.h>
+#import "common.h"
 #import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN

@@ -5,7 +5,7 @@
 //  Created by didi on 2019/10/7.
 //
 
-#import <DoraemonKit-NoUIWebView/DoraemonKit.h>
+#import "DoraemonKit.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
